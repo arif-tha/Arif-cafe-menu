@@ -45,15 +45,15 @@ export default function App() {
               />
             </div>
 
-            {/* Horizontal Scroll Menu */}
-            <div className="overflow-x-auto mt-6">
+            {/* Menu Items */}
+            <AnimatePresence mode="wait">
               <motion.div
                 key={active}
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.3 }}
-                className="flex gap-4 sm:gap-6 px-1 sm:px-2"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
               >
                 {menu[active]?.map((item, i) => (
                   <motion.div
@@ -61,16 +61,16 @@ export default function App() {
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.05, duration: 0.35 }}
-                    className="min-w-[250px] sm:min-w-[280px] lg:min-w-[300px] flex-shrink-0"
                   >
                     <MenuCard {...item} />
                   </motion.div>
                 ))}
               </motion.div>
-            </div>
+            </AnimatePresence>
 
             {/* QR Code Section */}
             <div className="mt-10">
+              {/* You can add QRCodeSection here if needed */}
             </div>
           </div>
 
