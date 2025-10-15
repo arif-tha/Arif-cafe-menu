@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar";
 import CategoryTabs from "./components/CategoryTabs";
 import MenuCard from "./components/MenuCard";
 import HomePage from "./components/HomePage";
-import QRCodeSection from "./components/QRCodeSection";
 import Footer from "./components/Footer";
 import menu from "./data/menu";
 
@@ -72,7 +71,6 @@ export default function App() {
 
             {/* QR Code Section */}
             <div className="mt-10">
-              <QRCodeSection url="https://your-live-menu.example.com" />
             </div>
           </div>
 
